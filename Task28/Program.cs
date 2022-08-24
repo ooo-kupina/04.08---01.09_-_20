@@ -6,11 +6,14 @@
 
 Console.Write("Введите целое число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-
 int composition = 1;
-for (int i = 1; i <= number; i++) 
+if (number > 0)
 {
-    composition = composition * i;
+    for (int i = 1; i <= number; i++)
+    {
+        composition = composition * i;
+    }
+    Console.WriteLine($"Произведение чисел от 1 до {number}: {composition}");
 }
-
-Console.WriteLine($"Произведение чисел от 1 до {number}: {composition}");
+else
+    Console.WriteLine($"Неверный ввод. Повторите ввод.");
